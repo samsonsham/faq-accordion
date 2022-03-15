@@ -1,4 +1,4 @@
-const faq = [
+const faqs = [
   {
     id: 1,
     question: 'How many team members can I invite?',
