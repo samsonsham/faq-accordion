@@ -3,42 +3,42 @@
 .card {
   background-color: $clr-bg-card;
   width: 100%;
-  max-width: 77rem;
-  border-radius: 2rem;
+  max-width: 57.5em;
+  border-radius: 1.7rem;
   text-align: center;
-  padding-bottom: 4rem;
+  padding-bottom: 3.3rem;
   box-shadow: 0 1rem 4rem $clr-card-shadow;
   background-image: url(../images/bg-pattern-mobile.svg);
   background-repeat: no-repeat;
-  background-position: top -0.5rem center;
+  background-position: top center;
+  background-size: 15rem;
+
   @media (min-width: $breakpoint-md) {
     display: flex;
     justify-content: space-between;
     overflow: hidden;
     background-image: none;
     padding-bottom: 0;
+    margin: 0 0 0 2.5rem;
   }
   @media (max-width: $breakpoint-lg) {
-    gap: 3rem;
+    gap: 2rem;
   }
 
   /* Header Image */
   &-image {
     overflow: visible;
-    margin: -9.5rem auto 0 auto;
+    margin: -6.7rem auto 0 auto;
     @media (min-width: $breakpoint-md) {
       width: 50rem;
-      padding-bottom: 6rem;
+      padding-bottom: 5rem;
       background-image: url(../images/bg-pattern-desktop.svg);
-      background-position: top -14rem left -47rem;
-      background-size: 80rem;
+      background-position: top -12rem left -36rem;
+      background-size: 60rem;
       background-repeat: no-repeat;
     }
-    @media (max-width: $breakpoint-lg) {
-      background-size: 73rem;
-    }
     .image-mobile {
-      width: 20rem;
+      width: 15rem;
       @media (min-width: $breakpoint-md) {
         display: none;
       }
@@ -47,9 +47,9 @@
       display: none;
       @media (min-width: $breakpoint-md) {
         display: block;
-        min-width: 34rem;
+        min-width: 30rem;
         width: 100%;
-        margin: 15.5rem 0 0 -7.5rem;
+        margin: 11rem 0 0 -5.5rem;
       }
     }
     .image-desktop-box {
@@ -57,31 +57,34 @@
       @media (min-width: $breakpoint-md) {
         display: block;
         position: absolute;
-        margin: 26.5rem 0 0 -7rem;
+        margin: 19.5rem 0 0 -6rem;
         width: 100%;
-        max-width: 15rem;
+        max-width: 12rem;
       }
     }
   }
 
   /* FAQ Content */
   &-body {
-    padding: 0 2rem;
+    padding: 0 1.5rem;
     @media (min-width: $breakpoint-md) {
       width: 100%;
-      padding: 1rem 9rem 0 0;
+      padding: 1rem 7rem 0 5.3rem;
       max-width: 28rem;
       text-align: left;
     }
     @media (min-width: $breakpoint-md) and (max-width: $breakpoint-lg) {
-      padding-right: 3rem;
+      padding: 1rem 2rem 0 0;
     }
 
     /* FAQ Heading */
     .heading {
       color: $clr-txt-header;
-      font-size: 2.7rem;
-      padding: 4.5rem 0 3rem 0;
+      font-size: 2rem;
+      margin-top: 3.3rem;
+      @media (min-width: $breakpoint-md) {
+        margin-top: 3.1rem;
+      }
     }
   }
 }
@@ -89,7 +92,10 @@
 /* Accordion
 --------------------------------------*/
 .wrapper {
-  margin-top: -1.5rem;
+  margin-top: 1rem;
+  @media (min-width: $breakpoint-md) {
+    margin-top: 1.2rem;
+  }
 }
 .accordion {
   text-align: left;
@@ -99,13 +105,13 @@
   /* Accordion Header */
   &-header {
     h2 {
-      padding: 1.4rem 0;
-      font-size: 1.1rem;
+      padding: 1rem 0;
+      font-size: 0.825rem;
       font-weight: 400;
       color: $clr-txt-accordion;
       cursor: pointer;
       @media (min-width: $breakpoint-md) {
-        font-size: 1.2rem;
+        font-size: 0.88rem;
       }
 
       /* Arrow */
@@ -115,11 +121,11 @@
         content: '';
         margin-left: auto;
         background-image: url(../images/icon-arrow-down.svg);
-        background-size: 1rem 0.6rem;
+        background-size: 0.65rem 0.35rem;
         background-position-y: center;
         background-repeat: no-repeat;
         display: inline-block;
-        width: 1rem;
+        width: 0.6rem;
         height: 0.6rem;
       }
       &:hover {
@@ -131,6 +137,7 @@
   /* Accordion Panel */
   &-panel {
     width: 90%;
+    font-size: $font-size;
     color: $clr-txt-panel;
     max-height: 0;
     overflow: hidden;
@@ -149,6 +156,6 @@
     }
   }
   .active + .accordion-panel {
-    padding-bottom: 1.5rem;
+    padding-bottom: 1.2rem;
   }
 }
