@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | FAQ Accordion Card</title>
+    <link rel="stylesheet" href="./css/style.comp.css" />
+    <script src="./js/before.js"></script>
+    <script src="./js/after.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <main>
+        <section class="card">
+          <!-- ********************  Card Image  ********************* -->
+          <div class="card-image">
+            <img
+              src="./images/illustration-woman-online-mobile.svg"
+              alt="Women Illustartion"
+              class="image-mobile"
+            />
+            <img
+              src="./images/illustration-box-desktop.svg"
+              alt="Women Illustartion"
+              class="image-desktop-box"
+            />
+            <img
+              src="./images/illustration-woman-online-desktop.svg"
+              alt="Women Illustartion"
+              class="image-desktop-woman"
+            />
+          </div>
+
+          <!-- ********************  Card Body  ********************* -->
+          <div class="card-body">
+            <h1 class="heading">FAQ</h1>
+            <div class="wrapper">
+              <!-- ********************  Accordion  ********************* -->
+              <script>
+                const elem = document.querySelector('.wrapper');
+                elem.innerHTML = faq
+                  .map(
+                    (item) => `
+                    <article class="accordion" key=${item.id}>
+                      <div class="accordion-header">
+                        <h2>${item.question}</h2>
+                      </div>
+                      <div class="accordion-panel">
+                        <p>${item.answer}</p>
+                      </div>
+                    </article>
+                  `
+                  )
+                  .join('');
+              </script>
+            </div>
+            <!-- End of wrapper -->
+          </div>
+          <!-- End of card-body -->
+        </section>
+      </main>
+      <footer class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by
+        <a href="https://www.frontendmentor.io/profile/samsonsham"
+          >Samson Sham</a
+        >.
+      </footer>
+    </div>
+  </body>
+</html>
