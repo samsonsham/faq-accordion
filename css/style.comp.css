@@ -29,16 +29,22 @@ input {
   font-size: 12px;
 }
 
+html {
+  height: auto;
+}
+
 body {
   font-family: "Kumbh Sans", sans-serif;
   background-image: linear-gradient(#af67e9, #6565e7);
   background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: auto;
 }
 
 .container {
   display: flex;
   flex-direction: column;
-  height: 100vh;
 }
 
 main {

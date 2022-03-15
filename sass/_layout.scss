@@ -1,12 +1,17 @@
+html {
+  height: auto;
+}
 body {
   font-family: $ff-primary;
   background-image: linear-gradient($clr-bg-gradient-1, $clr-bg-gradient-2);
   background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: auto;
 }
 .container {
   display: flex;
   flex-direction: column;
-  height: 100vh;
 }
 main {
   display: flex;
